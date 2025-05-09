@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  user-select: none;
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../assets/fontfamily/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("../assets/fontfamily/Poppins-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-image: url("../assets/bg/main2.jpg"), url("../assets/bg/main.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  animation: moveBackground 100s linear infinite;
+  font-family: "Poppins-Regular";
+}
+
+@keyframes moveBackground {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: 500px;
+  }
+}

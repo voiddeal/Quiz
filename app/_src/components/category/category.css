@@ -1,0 +1,16 @@
+.category {
+  grid-template-columns: repeat(auto-fit, 12rem);
+  gap: 2.5rem;
+  padding-inline: 2.5rem;
+  padding-block: 1rem;
+}
+
+.category__item {
+  box-shadow: 0px 0px 7px 1px rgba(46, 196, 138, 0.856) inset;
+  background-color: rgba(17, 102, 88, 0.5);
+}
+
+.category__item:hover {
+  box-shadow: 0px 0px 9px 3px rgba(46, 196, 138, 0.856) inset;
+  background-color: rgba(17, 102, 88, 1);
+}

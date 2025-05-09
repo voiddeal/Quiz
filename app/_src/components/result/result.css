@@ -1,0 +1,132 @@
+.quiz-result-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.quiz-result-page__summery {
+  position: absolute;
+  top: calc(10vh + 5vw);
+  left: 5vw;
+  font-size: 6vw;
+  background-color: rgba(31, 31, 31, 0.2117647059);
+  border-radius: 7vw;
+  padding: 0.3em;
+}
+.quiz-result-page__summery > span:first-child {
+  color: green;
+}
+.quiz-result-page__summery > span:nth-child(2) {
+  color: #c33dcf;
+}
+.quiz-result-page__summery > span:nth-child(3) {
+  color: #c33dcf;
+}
+
+.quiz-result-page__score {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  color: gray;
+}
+.quiz-result-page__score h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #c33dcf;
+}
+
+.score__score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.score-show-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s;
+}
+.score-show-detail:hover {
+  transform: translateY(20px);
+}
+.score-show-detail:hover .score-show-detail__btn {
+  animation: none;
+}
+.score-show-detail:hover .score-show-detail__text {
+  opacity: 0;
+}
+.score-show-detail__btn {
+  font-size: 4rem;
+  cursor: pointer;
+  animation: score-detail-btn 2500ms infinite;
+}
+.score-show-detail__text {
+  transition: inherit;
+  color: white;
+  text-decoration: underline;
+}
+
+.reset-btn {
+  cursor: pointer;
+  padding: 0.5em 2em;
+  border-radius: 7vw;
+  border: 1px solid #e639d8;
+  background-color: pink;
+  font-size: 1.2rem;
+  transition: background-color 100ms;
+}
+.reset-btn:hover {
+  background-color: #e950dc;
+}
+
+.hide {
+  animation: anim-hide 0.5s forwards;
+}
+
+.show {
+  animation: anim-show 0.5s forwards;
+}
+
+@keyframes anim-hide {
+  0% {
+    opacity: 100%;
+  }
+  99% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes anim-show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes score-detail-btn {
+  0% {
+    transform: initial;
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: initial;
+  }
+}

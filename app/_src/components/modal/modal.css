@@ -1,0 +1,45 @@
+.modal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: max(200px, 80%);
+  height: 50%;
+  position: absolute;
+  border-radius: 7vw;
+  background-color: rgba(15, 15, 15, 0.397);
+  backdrop-filter: blur(9px);
+  overflow: hidden;
+  inset: 0;
+  margin: auto;
+  color: #fff;
+}
+
+.modal__description {
+  padding: 0.5em 1.5em;
+}
+
+.modal__description span {
+  padding: 0.5em 1em;
+  border-left: 2px solid red;
+  display: block;
+}
+.modal__btns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.modal__btns button:first-child,
+.modal__btns button:nth-child(2) {
+  padding: 0.5em 2em;
+  border: none;
+  cursor: pointer;
+  border-radius: 7vw;
+  background-color: rgb(0, 114, 114);
+}
+.modal__btns button:first-child:hover,
+.modal__btns button:hover:nth-child(2) {
+  background-color: teal;
+  transition: background-color 0.2s;
+}
